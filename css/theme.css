@@ -9,7 +9,7 @@
     src: url("../fonts/AVIANOBOLD.OTF") format("opentype");
 }
 html {
-    font-size: 10px;
+    font-size: 11px;
 }
 body {
     font-size: 1.3rem;
@@ -317,13 +317,13 @@ section.resultados {
     margin: auto;
 }
 .resultados .resultados-list .resultado .imagen img{
-    width: 130px;
+    width: 150px;
 }
 .resultados .resultados-list .resultado .bajada {
     margin-left: auto;
     margin-right: auto;
    /*max-width: 120px;*/
-    font-family: Aviano, arial;
+    /*font-family: Aviano, arial;*/
     color: #5B5B5B;
     line-height: 1.7rem;
 }
@@ -336,10 +336,31 @@ section.resultados {
 .combina p {
     color: #212529;
     font-size: 2rem;
+    text-align: center;
+}
+.combina .combina-content {
+    background: #EAE7C5;
+    padding: 1rem;
+    border-radius: 10px;
+}
+.image-combina-right {
+    width: 90%;
+    float: right;
+}
+.image-combina-right-bottom {
+    float: right;
+    margin-right: 30px;
+    max-width: 150px;
 }
 .clientes {
     margin-top: 8rem;
     margin-bottom: 8rem;
+}
+.col-md-1de10 {
+    -ms-flex: 0 0 10%;
+    flex: 0 0 10%;
+    max-width: 10%;
+
 }
 @media (max-width: 767px){
     .combina p {
@@ -381,7 +402,7 @@ section.resultados {
 section.footer {
     /*min-height: 400px;*/
 }
-section.footer h2.footer-title {
+section.home-footer h2.footer-title {
     background:#96AF28;
     color: #fff;
     padding-top: 1rem;
@@ -417,31 +438,32 @@ section.footer h2.footer-title {
 .row-juegos {
     padding-top: 2rem;
 }
-.footer .logo {
+.home-footer .logo {
     width: 200px;
 }
-.footer .juego {
+.home-footer .juego {
     text-align: center;
     margin-bottom: 2rem;
 }
-.footer .bajada-footer {    
+.home-footer .bajada-footer {    
     margin-bottom: 2rem;
+    min-height: 70px;
 }
-.footer .botones {
+.home-footer .botones {
     margin-top: 1rem;
     margin-bottom: 1rem;
 }
-.footer .footer-button {
+.home-footer .footer-button {
     font-size: 1.0rem;
     color: #fff;
     margin-left: .5rem;
     margin-right: .5rem;
     padding: .8rem 1rem;
 }
-.footer .footer-button.green {
+.home-footer .footer-button.green {
     background:#96AF28;
 }
-.footer .footer-button.orange {
+.home-footer .footer-button.orange {
     background:#D49A0A;
 }
 .footer-info {
@@ -458,18 +480,18 @@ section.footer h2.footer-title {
         margin-left: auto;
         margin-right: auto;
     }
-    .footer .juego {
+    .home-footer .juego {
         max-width: 330px;
         background: #fff;
         padding: 1rem;
     }
-    .footer .juego-left {
+    .home-footer .juego-left {
         float: right;
     }
-    .footer .juego-right {
+    .home-footer .juego-right {
         float: left;
     }
-    .footer .footer-button {
+    .home-footer .footer-button {
         font-size: 1.2rem;
     }
     .row-juegos {
@@ -564,6 +586,14 @@ section.quienes-somos .btn-juego {
     white-space: normal;
     word-wrap: break-word;
 }
+.blue-rounded { 
+    color: #fff;
+    margin:0;
+    padding: .8rem 1rem;
+    background: #054675;
+    border-radius: 25px;
+    width: max-content;
+}
 
 .slide-cliente {
     text-align: center;
@@ -581,6 +611,9 @@ font-weight: 600;
 .slide-cliente .comentario-firma {
     font-weight: 600;
 }
+#carouselClientesHome {
+    min-height: 400px;
+}
 .clientes-carousel .carousel-control .fa{
     color: #000;
     font-weight: 600;
@@ -591,13 +624,15 @@ font-weight: 600;
     margin-top: 2rem;
 } 
 .comment-image {
-    float: left;
+    
     max-width: 120px;
 }
 .comment .bajada {
-    padding-left: 120px;
+    
 }
-
+.comment .contenido {
+    text-align: justify;
+}
 /*  quienes somos   */
 
 .row-paises {
@@ -649,6 +684,7 @@ p.texto {
 .listado-paises .listado-pais .titulo{
     color: #96AF28;
     font-weight: 600;
+    font-size: 1.4rem;
 }
 .listado-paises .listado-pais .subtitulo{
     color: #000;
@@ -657,11 +693,19 @@ p.texto {
 .listado-paises .listado-pais p.email{
     font-size: 1.1rem;
 }
-
+@media(min-width:768px){
+    .listado-paises .listado-pais {
+        min-height: 330px;
+    }
+}
 /*  noticias    */
 
 .youtube-nuestro-canal {
     float: right;
+    color: #E31C1C;
+}
+.youtube-nuestro-canal img{
+    margin-left: 10px;
 }
 .noticias {
     margin-bottom: 2rem;
@@ -702,14 +746,14 @@ p.texto {
 }
 .galeria-texto {
     text-align: center;
-    padding-left: 1rem;
-    padding-right: 1rem;
+    padding-left: .5rem;
+    padding-right: .5rem;
 }
     
 @media (min-width: 767px){
     .galeria-texto {
-        padding-left: 3rem;
-        padding-right: 3rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
     }
 }
 
@@ -1188,4 +1232,9 @@ margin-bottom: 80px;
 }
 .resultados-titulo {
     text-align: center;
+}
+
+.explicanos-tus-retos {
+    margin-top: 8rem;
+    margin-bottom: 8rem;    
 }
